@@ -1,0 +1,15 @@
+<div class="container-fluid custom-container">
+  <div class="row">
+    <% if (searchResults.length > 0) { %>
+    <% searchResults.forEach(function(note) { %>
+    <div class="note-item">
+      <a href="/dashboard/item/<%= note._id %>" class="note-link">
+        <h4><%= note.title %></h4>
+      </a>
+    </div>
+    <% }); %>
+    <% } else { %>
+    <p class="no-items-msg">No items found.</p>
+    <% } %>
+  </div>
+</div>
